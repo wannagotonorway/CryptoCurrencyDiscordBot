@@ -1,12 +1,41 @@
 {
+  "name": "cryptocurrency-discord-bot",
+  "version": "2.0.0",
+  "description": "Discord бот для отслеживания цен криптовалют в реальном времени",
+  "main": "index.js",
   "author": "Carlos Ferreras",
   "license": "MIT",
+  "keywords": [
+    "discord",
+    "bot",
+    "cryptocurrency",
+    "crypto",
+    "bitcoin",
+    "price-tracking",
+    "coingecko"
+  ],
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
     "axios": "^1.6.7",
     "discord.js": "^14.14.1",
-    "dotenv": "^5.0.0"
-  }
+    "dotenv": "^16.4.5"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/CryptoCurrencyDiscordBot.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yourusername/CryptoCurrencyDiscordBot/issues"
+  },
+  "homepage": "https://github.com/yourusername/CryptoCurrencyDiscordBot#readme"
 }
