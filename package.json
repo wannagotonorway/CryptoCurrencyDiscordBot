@@ -1,12 +1,89 @@
 {
+  "name": "cryptocurrency-discord-bot",
+  "version": "2.1.0",
+  "description": "Discord бот для отслеживания цен криптовалют в реальном времени с использованием API CoinGecko",
+  "main": "index.js",
   "author": "Carlos Ferreras",
   "license": "MIT",
+  "keywords": [
+    "discord",
+    "bot",
+    "cryptocurrency",
+    "crypto",
+    "bitcoin",
+    "ethereum",
+    "price-tracking",
+    "coingecko",
+    "real-time",
+    "discord.js",
+    "nodejs"
+  ],
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "format": "prettier --write .",
+    "audit": "npm audit",
+    "audit:fix": "npm audit fix",
+    "update": "npm update",
+    "outdated": "npm outdated",
+    "clean": "rm -rf node_modules package-lock.json && npm install",
+    "docker:build": "docker build -t crypto-discord-bot .",
+    "docker:run": "docker run --env-file .env crypto-discord-bot",
+    "docker:compose": "docker-compose up -d",
+    "docker:logs": "docker-compose logs -f",
+    "docker:stop": "docker-compose down"
   },
   "dependencies": {
     "axios": "^1.6.7",
     "discord.js": "^14.14.1",
-    "dotenv": "^5.0.0"
+    "dotenv": "^16.4.5"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0",
+    "jest": "^29.7.0",
+    "eslint": "^8.57.0",
+    "prettier": "^3.2.5"
+  },
+  "engines": {
+    "node": ">=16.0.0",
+    "npm": ">=8.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wannagotonorway/CryptoCurrencyDiscordBot.git"
+  },
+  "bugs": {
+    "url": "https://github.com/wannagotonorway/CryptoCurrencyDiscordBot/issues"
+  },
+  "homepage": "https://github.com/wannagotonorway/CryptoCurrencyDiscordBot#readme",
+  "funding": {
+    "type": "github",
+    "url": "https://github.com/wannagotonorway/CryptoCurrencyDiscordBot"
+  },
+  "os": [
+    "linux",
+    "darwin",
+    "win32"
+  ],
+  "cpu": [
+    "x64",
+    "arm64"
+  ],
+  "files": [
+    "index.js",
+    "package.json",
+    "README.md",
+    "LICENSE",
+    "env.example",
+    "Dockerfile",
+    "docker-compose.yml"
+  ],
+  "publishConfig": {
+    "access": "public"
   }
 }
